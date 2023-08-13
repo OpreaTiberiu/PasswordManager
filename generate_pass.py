@@ -1,6 +1,6 @@
 # Password Generator Project
 from random import randint, shuffle, sample
-import pyperclip
+
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
            'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
            'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -14,5 +14,4 @@ def generate_pass():
     nr_numbers = randint(3, 5)
     pass_list = sample(letters, nr_letters) + sample(numbers, nr_numbers) + sample(symbols, nr_symbols)
     shuffle(pass_list)
-    pyperclip.copy("".join(pass_list))
     return "".join(pass_list)
